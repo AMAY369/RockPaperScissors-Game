@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1 class="title">Rock Paper Scissors</h1>
-  <p class="buttons">
-    <button onclick="playGame('rock')"><img src="images/rock-emoji.png" alt=""></button>
-    <button onclick="playGame('paper')"><img src="images/paper-emoji.png" alt=""></button>
-    <button onclick="playGame('scissors')"><img src="images/scissors-emoji.png" alt=""></button>
-  </p>
-  <div class="container">
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="shortcut icon" href="images/rock_paper_scissors_logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <div class="buttons">
+      <button onclick="
+      playGame('rock');
+    "><img src="images/rock-emoji.png" alt="Rock Image"></button>
+
+    <button onclick="
+      playGame('paper');
+    "><img src="images/paper-emoji.png" alt="Paper Image"></button>
+
+    <button onclick="
+      playGame('scissors');
+    "><img src="images/scissors-emoji.png" alt="Scissors Image"></button>
+
+    </div>
     <p class="js-result result"></p>
-    <p class="js-moves moves"></p>
-    <p class="js-scores"></p>
-</div>
-<div class="resetButton">
-  <button onclick="playGame('reset')">Reset</button>
-</div>
-  <script type="text/javascript" src="script.js">
-  </script>
-</body>
+    <p class="js-moves moves">
+      <span class="js-player-move"></span>
+      <span class="js-comp-move"></span>
+    </p>
+    <p class="js-score score"></p>
+
+    <div class="reset-button">
+      <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " >Reset Score</button>
+    </div>
+
+    <script src="script.js">
+    </script>
+  </body>
 </html>
