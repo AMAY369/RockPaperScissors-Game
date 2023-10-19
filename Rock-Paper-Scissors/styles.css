@@ -3,7 +3,7 @@ body{
   background-color: rgb(25,25,25);
   color: rgb(220, 220, 220);
 }
-.title{
+.game-name{
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
